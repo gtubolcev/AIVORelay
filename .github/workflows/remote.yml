@@ -9,4 +9,6 @@ jobs:
         with:
           node-version: 20
       - run: npm install
+      - name: Update Cargo deps
+        run: cd src-tauri && cargo update
       - run: npm run tauri build
